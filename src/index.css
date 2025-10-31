@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    background-color: #063d1d; /* Tailwind bg-green-950 */
+    color: #fff; /*Tailwind text-white*/
+    overflow-x: hidden;
+}
+.logo-dancing {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700; /* من 400 إلى 700 */
+    font-style: normal;
+    font-size: 40px;
+}
+@media (max-width:768px){
+    .logo-dancing {
+    font-size: 30px;
+}
+}
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.nav-links{
+    @apply text-2xl font-bold duration-300
+}
+.nav-links:hover{
+    @apply text-yellow-500
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+@keyframes circle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@layer utilities {
+  .animate-[float_6s_ease-in-out_infinite] {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-[circle_8s_ease-in-out_infinite] {
+    animation: circle 8s ease-in-out infinite;
+  }
+  .animate-[float_10s_ease-in-out_infinite] {
+    animation: float 10s ease-in-out infinite;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
